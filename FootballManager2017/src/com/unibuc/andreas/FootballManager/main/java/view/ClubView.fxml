@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.*?>
+<?import org.controlsfx.glyphfont.Glyph ?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.unibuc.andreas.FootballManager.main.java.controller.ClubController">
+    <children>
+        <VBox fx:id="Content" spacing="3" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <padding>
+                <Insets bottom="25" left="20" right="20" top="25" />
+            </padding>
+            <children>
+                <Text fill="#555555" text="List Clubs">
+                        <font>
+                            <Font name="Apple SD Gothic Neo Bold" size="15"/>
+                        </font>
+                </Text>
+                <Line fx:id="LineTable" startX="0" stroke="#e1e1e1" strokeWidth="1.5" />
+                <TableView fx:id="TableClubs" editable="false" minHeight="330">
+                    <columns>
+                        <TableColumn fx:id="ColumnName" editable="false" resizable="false" sortable="true" prefWidth="180" text="Club Name">
+                            <graphic>
+                                <Glyph fontFamily="FontAwesome" icon="BOOK" textFill="#78829d"/>
+                            </graphic>
+                        </TableColumn>
+                        <TableColumn fx:id="ColumnCountry" editable="false" resizable="false" sortable="true" prefWidth="160" text="Club Country">
+                        <graphic>
+                            <Glyph fontFamily="FontAwesome" icon="GLOBE" textFill="#ffffff"/>
+                        </graphic>
+                        </TableColumn>
+                        <TableColumn fx:id="ColumnMP" editable="false" resizable="false" sortable="true" prefWidth="80" text="MP">
+                            <graphic>
+                                <Glyph fontFamily="FontAwesome" icon="GLOBE" textFill="#ffffff"/>
+                            </graphic>
+                        </TableColumn>
+                        <TableColumn fx:id="ColumnW" editable="false" resizable="false" sortable="true" prefWidth="80" text="W">
+                            <graphic>
+                                <Glyph fontFamily="FontAwesome" icon="GLOBE" textFill="#ffffff"/>
+                            </graphic>
+                        </TableColumn>
+                        <TableColumn fx:id="ColumnD" editable="false" resizable="false" sortable="true" prefWidth="80" text="D">
+                            <graphic>
+                                <Glyph fontFamily="FontAwesome" icon="GLOBE" textFill="#ffffff"/>
+                            </graphic>
+                        </TableColumn>
+                        <TableColumn fx:id="ColumnL" editable="false" resizable="false" sortable="true" prefWidth="80" text="L">
+                            <graphic>
+                                <Glyph fontFamily="FontAwesome" icon="GLOBE" textFill="#ffffff"/>
+                            </graphic>
+                        </TableColumn>
+                        <TableColumn fx:id="ColumnGF" editable="false" resizable="false" sortable="true" prefWidth="80" text="GF">
+                            <graphic>
+                                <Glyph fontFamily="FontAwesome" icon="GLOBE" textFill="#ffffff"/>
+                            </graphic>
+                        </TableColumn>
+                        <TableColumn fx:id="ColumnGA" editable="false" resizable="false" sortable="true" prefWidth="80" text="GA">
+                            <graphic>
+                                <Glyph fontFamily="FontAwesome" icon="GLOBE" textFill="#ffffff"/>
+                            </graphic>
+                        </TableColumn>
+                        <TableColumn fx:id="ColumnGD" editable="false" resizable="false" sortable="true" prefWidth="80" text="GD">
+                            <graphic>
+                                <Glyph fontFamily="FontAwesome" icon="GLOBE" textFill="#ffffff"/>
+                            </graphic>
+                        </TableColumn>
+                        <TableColumn fx:id="ColumnPTS" editable="false" resizable="false" sortable="true" prefWidth="80" text="PTS">
+                            <graphic>
+                                <Glyph fontFamily="FontAwesome" icon="GLOBE" textFill="#ffffff"/>
+                            </graphic>
+                        </TableColumn>
+                        <TableColumn fx:id="ColumnAction" editable="false" resizable="false" sortable="false" prefWidth="115" text="Action">
+                            <graphic>
+                                <Glyph fontFamily="FontAwesome" icon="COGS" textFill="#ffffff"/>
+                            </graphic>
+                        </TableColumn>
+                    </columns>
+                    <VBox.margin>
+                        <Insets top="10.0" bottom="10.0" />
+                    </VBox.margin>
+                </TableView>
+                <TextField fx:id="Search" promptText="Search Club Name" maxWidth="300"/>
+            </children>
+        </VBox>
+        <VBox fx:id="Right" minHeight="NaN" minWidth="250.0" prefHeight="NaN" prefWidth="250.0" spacing="3" styleClass="right-pane" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <padding>
+                <Insets bottom="15" left="6" right="6" top="15" />
+            </padding>
+            <children>
+                <Text fill="#555555" text="Add New Club">
+                    <font>
+                        <Font name="Apple SD Gothic Neo Bold" size="15" />
+                    </font>
+                </Text>
+                <Line endX="230" startX="0" stroke="#e1e1e1" strokeWidth="1.5" />
+                <Text fill="#555555" text="Club Name:">
+                    <font>
+                        <Font name="Apple SD Gothic Neo" size="13" />
+                    </font>
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+                </Text>
+                <TextField fx:id="2" promptText="Club Name" />
+                <Text fill="#555555" text="Club Country:">
+                    <font>
+                        <Font name="Apple SD Gothic Neo" size="13" />
+                    </font>
+                    <VBox.margin>
+                        <Insets top="7.0" />
+                    </VBox.margin>
+                </Text>
+                <TextField fx:id="ClubCountry" promptText="Club Country" />
+                <Text fill="#555555" text="Matches Won:">
+                    <font>
+                        <Font name="Apple SD Gothic Neo" size="13" />
+                    </font>
+                    <VBox.margin>
+                        <Insets top="7.0" />
+                    </VBox.margin>
+                </Text>
+                <TextField fx:id="ClubW" promptText="Matches Won" />
+                <Text fill="#555555" text="Matches Drawn:">
+                    <font>
+                        <Font name="Apple SD Gothic Neo" size="13" />
+                    </font>
+                    <VBox.margin>
+                        <Insets top="7.0" />
+                    </VBox.margin>
+                </Text>
+                <TextField fx:id="ClubD" promptText="Matches Drawn" />
+                <Text fill="#555555" text="Matches Lose:">
+                    <font>
+                        <Font name="Apple SD Gothic Neo" size="13" />
+                    </font>
+                    <VBox.margin>
+                        <Insets top="7.0" />
+                    </VBox.margin>
+                </Text>
+                <TextField fx:id="ClubL" promptText="Matches Lose" />
+                <Text fill="#555555" text="Goals Against:">
+                    <font>
+                        <Font name="Apple SD Gothic Neo" size="13" />
+                    </font>
+                    <VBox.margin>
+                        <Insets top="7.0" />
+                    </VBox.margin>
+                </Text>
+                <TextField fx:id="ClubGA" promptText="Goals Against" />
+                <Text fill="#555555" text="Goal Difference:">
+                    <font>
+                        <Font name="Apple SD Gothic Neo" size="13" />
+                    </font>
+                    <VBox.margin>
+                        <Insets top="7.0" />
+                    </VBox.margin>
+                </Text>
+                <TextField fx:id="ClubGD" promptText="Goal Difference" />
+                <Text fill="#555555" text="Points:">
+                    <font>
+                        <Font name="Apple SD Gothic Neo" size="13" />
+                    </font>
+                    <VBox.margin>
+                        <Insets top="7.0" />
+                    </VBox.margin>
+                </Text>
+                <TextField fx:id="ClubPTS" promptText="Points" />
+                <HBox spacing="10">
+                    <padding>
+                        <Insets top="10"/>
+                    </padding>
+                    <children>
+                        <Button fx:id="Refresh" text="Refresh" prefWidth="120" onAction="#refresh"/>
+                        <Button fx:id="Save" text="Save" prefWidth="120" onAction="#save"/>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

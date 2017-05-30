@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="Main" minHeight="650.0" minWidth="1000.0" prefHeight="650.0" prefWidth="1000.0" stylesheets="@../../resources/css/application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.unibuc.andreas.FotballManager.main.java.controller.ApplicationController">
+    <children>
+        <ImageView fitHeight="150.0" fitWidth="1800" pickOnBounds="true" AnchorPane.topAnchor="0.0">
+            <image>
+                <Image url="@../../resources/images/application/cover.jpg" />
+            </image>
+        </ImageView>
+
+        <TabPane AnchorPane.topAnchor="150.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.bottomAnchor="0.0">
+            <tabs>
+                <Tab closable="false" text="Players">
+                    <content>
+                        <fx:include fx:id="PlayersTabPage" source="PlayerView.fxml"/>
+                    </content>
+                </Tab>
+                <Tab closable="false" text="Teams">
+                    <content>
+                        <fx:include fx:id="TeamsTabPage" source="ClubView.fxml"/>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</AnchorPane>

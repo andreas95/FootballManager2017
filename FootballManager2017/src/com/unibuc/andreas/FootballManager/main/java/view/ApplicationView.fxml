@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.text.Font?>
+<AnchorPane fx:id="Main" minHeight="827.0" minWidth="1430.0" prefHeight="827.0" prefWidth="1430.0" stylesheets="@../../resources/css/application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.unibuc.andreas.FootballManager.main.java.controller.ApplicationController">
+    <children>
+        <ImageView fitHeight="150.0" pickOnBounds="true" AnchorPane.topAnchor="0.0">
+            <image>
+                <Image url="@../../resources/images/application/cover.png" />
+            </image>
+        </ImageView>
+        <Text text="Football Manager 2017" fill="white" AnchorPane.topAnchor="50.0" AnchorPane.leftAnchor="20.0">
+            <effect>
+                <Reflection />
+            </effect>
+            <font>
+                <Font size="30.0"/>
+            </font>
+        </Text>
+
+        <TabPane AnchorPane.topAnchor="150.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.bottomAnchor="0.0">
+            <tabs>
+                <Tab closable="false" text="Players">
+                    <content>
+                        <fx:include fx:id="PlayersTabPage" source="PlayerView.fxml"/>
+                    </content>
+                </Tab>
+                <Tab closable="false" text="Teams">
+                    <content>
+                        <fx:include fx:id="TeamsTabPage" source="ClubView.fxml"/>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</AnchorPane>
